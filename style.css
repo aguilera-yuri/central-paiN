@@ -1,0 +1,234 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo-icon {
+      width: 100px;
+      height: 50px;
+      display: flex;
+      background-image: url(image.png);
+      background-size: contain;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-divider {
+      color: #444;
+      font-size: 16px;
+    }
+
+    .btn-login {
+      background: #C0392B;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.5px;
+      transition: background 0.2s;
+    }
+
+    .btn-login:hover {
+      background: #e74c3c;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 460px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-image: url(Group\ 2.png);
+      background-size: cover;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 70px 40px;
+      max-width: 560px;
+    }
+
+    .hero-title {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      font-weight: 700;
+      color: #aaa;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .btn-join {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #C0392B;
+      padding: 13px 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+    }
+
+    .btn-join:hover {
+      background: #C0392B;
+      color: #fff;
+    }
+
+    /* ── SEÇÃO HISTÓRIA ── */
+    .section-history {
+      padding: 72px 40px 48px;
+      text-align: center;
+      background: #161616;
+    }
+
+    .section-history h2 {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+
+    .accent-red {
+      color: #C0392B;
+    }
+
+    .section-history p {
+      font-size: 15px;
+      font-weight: 600;
+      color: #bbb;
+      max-width: 820px;
+      margin: 0 auto 12px;
+      line-height: 1.75;
+    }
+
+    .cards-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 70px 20px 70px;
+      background-color: #161616;
+    }
+
+    .card {
+      border: 1.5px solid #C0392B;
+      border-radius: 50px;
+      height: 250px;
+      width: 300px;
+      padding: 36px 24px 32px;
+      text-align: center;
+      background-color: #161616 ;
+      transition: background 0.2s;
+    }
+
+    .card:hover {
+      background: #1f1f1f;
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 70%;
+      background: #C0392B;
+      margin: 0 auto 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card p {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ccc;
+      line-height: 1.65;
+    }
+
+    footer {
+      background: #0d0d0d;
+      padding: 30px 40px;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer span {
+      color: #C0392B;
+      font-weight: 700;
+    }
