@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports Team</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styleLineups.css">
+</head>
+
+<body>
+    <nav class="nav">
+    <div class="logo-icon">
+    </div>
+    <div class="nav-links">
+      <a href="pain_gaming_home.html">HOME</a>
+      <span class="nav-divider">|</span>
+      <a href="lineups.html">LINEUPS</a>
+      <button class="btn-login">
+        LOGIN
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+    <main>
+        <div class="game-tabs">
+            <button id="btn_lol" onclick="trocarModalidade('lol')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">LEAGUE
+                OF LEGENDS</button>
+            <button id="btn_cs" onclick="trocarModalidade('cs')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">COUNTER
+                STRIKE</button>
+            <button id="btn_kings" onclick="trocarModalidade('kings')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">KINGS
+                LEAGUE</button>
+            <button id="btn_gta" onclick="trocarModalidade('gta')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">GTA</button>
+        </div>
+
+        <div id="painel_lol" style="display:block;">
+            <div class="cat-tabs">
+                <button id="btn_lol_principal" onclick="trocarCategoria('lol','principal')"
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">PRINCIPAL</button>
+                <button id="btn_lol_academy" onclick="trocarCategoria('lol','academy')"
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">ACADEMY</button>
+            </div>
+            <div id="lol_principal" class="roster-panel" style="display:block;">
+                <div class="grid-5" id="grid_lol_principal"></div>
+            </div>
+            <div id="lol_academy" class="roster-panel" style="display:none;">
+                <div class="grid-5" id="grid_lol_academy"></div>
+            </div>
+        </div>
+
+        <div id="painel_cs" style="display:none;">
+            <div class="cat-tabs">
+                <button id="btn_cs_principal" onclick="trocarCategoria('cs','principal')"
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">PRINCIPAL</button>
+                <button id="btn_cs_academy" onclick="trocarCategoria('cs','academy')"
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">ACADEMY</button>
+            </div>
+            <div id="cs_principal" class="roster-panel" style="display:block;">
+                <div class="grid-5" id="grid_cs_principal"></div>
+            </div>
+            <div id="cs_academy" class="roster-panel" style="display:none;">
+                <div class="grid-5" id="grid_cs_academy"></div>
+            </div>
+        </div>
+
+        <div id="painel_kings" style="display:none;">
+            <div class="roster-panel">
+                <div class="grid-17" id="grid_kings"></div>
+            </div>
+        </div>
+
+        <div id="painel_gta" style="display:none;">
+            <div class="roster-panel">
+                <div class="grid-6" id="grid_gta"></div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        let jogadoresLolPrincipal = [
+            { nome: "Robo", foto: "assets/players/robo.png", bandeira: "assets/iconplayers/brasil.png", icone: "assets/iconplayers/top.png" },
+            { nome: "CarioK", foto: "assets/players/cariok.png", bandeira: "assets/iconplayers/brasil.png", icone: "assets/iconplayers/jungle.png" },
+            { nome: "Keine", foto: "assets/players/keine.png", bandeira: "assets/iconplayers/korea.png", icone: "assets/iconplayers/mid.png" },
+            { nome: "Trigger", foto: "assets/players/trigger.png", bandeira: "assets/iconplayers/korea.png", icone: "assets/iconplayers/bot.png" },
+            { nome: "Kuri", foto: "assets/players/kuri.png", bandeira: "assets/iconplayers/korea.png", icone: "assets/iconplayers/sup.png" }
+        ];
+
+        let jogadoresLolAcademy = [
+            { nome: "Zoen", foto: "assets/players/zoen.png", bandeira: "assets/iconplayers/argentina.png", icone: "assets/iconplayers/top.png" },
+            { nome: "Samkz", foto: "assets/players/samkz.png", bandeira: "assets/iconplayers/brasil.png", icone: "assets/iconplayers/jungle.png" },
+            { nome: "Namiru", foto: "assets/players/namiru.png", bandeira: "assets/iconplayers/brasil.png", icone: "assets/iconplayers/mid.png" },
+            { nome: "Marvin", foto: "assets/players/marvin.png", bandeira: "assets/iconplayers/brasil.png", icone: "assets/iconplayers/bot.png" },
+            { nome: "Gatovisck", foto: "assets/players/gatovisck.png", bandeira: "assets/iconplayers/brasil.png", icone: "assets/iconplayers/sup.png" }
+        ];
+
+        let jogadoresCsPrincipal = [
+            { nome: "v$m", foto: "assets/players/vsm.png", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "nqz", foto: "assets/players/nqz.png", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "biguzera", foto: "assets/players/biguzera.png", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "snow", foto: "assets/players/snow.png", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "piriajr", foto: "assets/players/piriajr.png", bandeira: "assets/iconplayers/brasil.png", icone: "" }
+        ];
+        let jogadoresCsAcademy = [
+            { nome: "CS Junior 1", foto: "", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "CS Junior 2", foto: "", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "CS Junior 3", foto: "", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "CS Junior 4", foto: "", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+            { nome: "CS Junior 5", foto: "", bandeira: "assets/iconplayers/brasil.png", icone: "" },
+        ];
+        let jogadoresKings = [
+            { nome: "Kings 1", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 2", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 3", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 4", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 5", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 6", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 7", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 8", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 9", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 10", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 11", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 12", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 13", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 14", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 15", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 16", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "Kings 17", foto: "", bandeira: "assets/iconplayers/brasil.png" }
+        ];
+        let jogadoresGta = [
+            { nome: "GTA 1", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "GTA 2", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "GTA 3", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "GTA 4", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "GTA 5", foto: "", bandeira: "assets/iconplayers/brasil.png" },
+            { nome: "GTA 6", foto: "", bandeira: "assets/iconplayers/brasil.png" }
+        ];
+
+        let estiloAtivo = "padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
+        let estiloInativo = "padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
+        let estiloCatAtivo = "padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
+        let estiloCatInativo = "padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
+
+        function criarCard(jogador) {
+            let imgOuSvg = "";
+            
+            if (jogador.foto != "") {
+                imgOuSvg = '<img src="' + jogador.foto + '">';
+            } else {
+                imgOuSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#3a3a3a" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
+            }
+
+            let icone = '<img src="' + jogador.icone + '">';
+            let bandeira = '<img src="' + jogador.bandeira + '">';
+
+            let html = '<div class="player-card">';
+            html += '<div class="player-photo">' + imgOuSvg + '</div>';
+            html += '<div class="player-info">';
+            html += '<div class="flag">' + bandeira + '</div>';
+            html += '<span class="player-name">' + jogador.nome + '</span>';
+            html += '<span class="role-icon">' + icone + '</span>';
+            html += '</div></div>';
+            return html;
+        }
+
+        function preencherGrid(elementoGrid, vetor) {
+            let html = "";
+            for (let i = 0; i < vetor.length; i++) {
+                html += criarCard(vetor[i]);
+            }
+            elementoGrid.innerHTML = html;
+        }
+
+        preencherGrid(grid_lol_principal, jogadoresLolPrincipal);
+        preencherGrid(grid_lol_academy, jogadoresLolAcademy);
+        preencherGrid(grid_cs_principal, jogadoresCsPrincipal);
+        preencherGrid(grid_cs_academy, jogadoresCsAcademy);
+        preencherGrid(grid_kings, jogadoresKings);
+        preencherGrid(grid_gta, jogadoresGta);
+
+        function trocarModalidade(moda) {
+            painel_lol.style.display = "none";
+            painel_cs.style.display = "none";
+            painel_kings.style.display = "none";
+            painel_gta.style.display = "none";
+
+            btn_lol.style.cssText = estiloInativo;
+            btn_cs.style.cssText = estiloInativo;
+            btn_kings.style.cssText = estiloInativo;
+            btn_gta.style.cssText = estiloInativo;
+
+            if (moda == 'lol') { painel_lol.style.display = "block"; btn_lol.style.cssText = estiloAtivo; }
+            if (moda == 'cs') { painel_cs.style.display = "block"; btn_cs.style.cssText = estiloAtivo; }
+            if (moda == 'kings') { painel_kings.style.display = "block"; btn_kings.style.cssText = estiloAtivo; }
+            if (moda == 'gta') { painel_gta.style.display = "block"; btn_gta.style.cssText = estiloAtivo; }
+        }
+
+        function trocarCategoria(jogo, cat) {
+            if (jogo == 'lol') {
+                lol_principal.style.display = "none";
+                lol_academy.style.display = "none";
+                btn_lol_principal.style.cssText = estiloCatInativo;
+                btn_lol_academy.style.cssText = estiloCatInativo;
+                if (cat == 'principal') { lol_principal.style.display = "block"; btn_lol_principal.style.cssText = estiloCatAtivo; }
+                if (cat == 'academy') { lol_academy.style.display = "block"; btn_lol_academy.style.cssText = estiloCatAtivo; }
+            }
+            if (jogo == 'cs') {
+                cs_principal.style.display = "none";
+                cs_academy.style.display = "none";
+                btn_cs_principal.style.cssText = estiloCatInativo;
+                btn_cs_academy.style.cssText = estiloCatInativo;
+                if (cat == 'principal') { cs_principal.style.display = "block"; btn_cs_principal.style.cssText = estiloCatAtivo; }
+                if (cat == 'academy') { cs_academy.style.display = "block"; btn_cs_academy.style.cssText = estiloCatAtivo; }
+            }
+        }
+    </script>
+</body>
+
+</html>

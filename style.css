@@ -18,7 +18,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 40px;
+      padding: 18px 40px 18px 70px;
       background: #111;
       position: sticky;
       top: 0;
@@ -30,7 +30,7 @@
       width: 100px;
       height: 50px;
       display: flex;
-      background-image: url(image.png);
+      background-image: url(assets/logo.png);
       background-size: contain;
       align-items: center;
       justify-content: center;
@@ -88,7 +88,7 @@
       display: flex;
       align-items: center;
       overflow: hidden;
-      background-image: url(Group\ 2.png);
+      background-image: url(assets/principal.png);
       background-size: cover;
     }
 
