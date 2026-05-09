@@ -84,8 +84,9 @@
 
         .game-tabs {
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
             margin-bottom: 24px;
         }
 
