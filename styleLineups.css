@@ -17,10 +17,6 @@ body {
     justify-content: space-between; 
     padding: 20px 50px;
     background-color: #111;
-    border-bottom: 1px solid #222;
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 .logo-icon {
@@ -39,19 +35,15 @@ body {
 
 .nav-links a {
     color: #ccc;
-    text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
-/* 3. BOTÃO DE LOGIN */
 .btn-login {
     background-color: #C0392B;
     color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
 }
 
@@ -64,35 +56,34 @@ body {
     object-fit: contain;
 }
 
-/* 4. ÁREA PRINCIPAL E TABS */
 main {
     padding: 40px;
 }
 
 .game-tabs, .cat-tabs {
     display: flex;
-    justify-content: center; /* Centraliza as abas */
+    justify-content: center; 
     gap: 20px;
     margin-bottom: 30px;
 }
 
-/* 5. PAINEL DOS JOGADORES (ROSTER) */
+
 .roster-panel {
     border: 2px solid #e8192c;
     border-radius: 10px;
     padding: 30px;
-    background-color: #1f1f1f; /* Fundo sólido é mais fácil de entender */
+    background-color: #1f1f1f; 
 }
 
-/* 6. GRID DE JOGADORES (Usando Flexbox que você já conhece) */
+
 .grid-5 {
     display: flex;
-    flex-wrap: wrap; /* Se não couber, ele pula pra linha de baixo */
+    flex-wrap: wrap; 
     justify-content: center;
     gap: 25px;
 }
 
-/* 7. CARD DO JOGADOR */
+
 .player-card {
     display: flex;
     flex-direction: column;
@@ -104,14 +95,13 @@ main {
     height: 160px;
     border: 2px solid #e8192c;
     border-radius: 10px;
-    overflow: hidden;
     margin-bottom: 10px;
 }
 
 .player-photo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a foto preencher o quadrado sem amassar */
+    object-fit: cover; 
 }
 
 .player-info {
@@ -126,7 +116,6 @@ main {
     color: #fff;
 }
 
-/* Ícones pequenos (Bandeiras/Roles) */
 .flag, .role-icon {
     width: 20px;
     height: 15px;

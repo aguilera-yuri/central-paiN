@@ -21,7 +21,6 @@ body {
   min-height: 480px;
   background-color: #252525;
   border-radius: 18px;
-  overflow: hidden; 
 }
 
 .left {
@@ -35,7 +34,6 @@ body {
 .left h1 {
   font-size: 32px;
   color: #f0f0f0;
-  text-transform: uppercase;
   margin-bottom: 30px;
 }
 
@@ -57,7 +55,6 @@ body {
   border-radius: 25px;
   padding: 12px 20px;
   color: #fff;
-  outline: none; 
 }
 
 .btn-entrar {
@@ -68,7 +65,6 @@ body {
   border-radius: 25px;
   padding: 12px;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .btn-entrar:hover {
@@ -84,7 +80,6 @@ body {
 
 .register-link a {
   color: #e0203a;
-  text-decoration: none;
 }
 
 .right {

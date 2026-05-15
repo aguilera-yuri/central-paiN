@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esports Team</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <title>lineups</title>
     <link rel="stylesheet" href="styleLineups.css">
 </head>
 
@@ -29,24 +26,24 @@
     <main>
         <div class="game-tabs">
             <button id="btn_lol" onclick="trocarModalidade('lol')"
-                style="padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">LEAGUE
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-size:13px; font-weight:700">LEAGUE
                 OF LEGENDS</button>
             <button id="btn_cs" onclick="trocarModalidade('cs')"
-                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">COUNTER
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">COUNTER
                 STRIKE</button>
             <button id="btn_kings" onclick="trocarModalidade('kings')"
-                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">KINGS
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">KINGS
                 LEAGUE</button>
             <button id="btn_gta" onclick="trocarModalidade('gta')"
-                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">GTA</button>
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">GTA</button>
         </div>
 
         <div id="painel_lol" style="display:block;">
             <div class="cat-tabs">
                 <button id="btn_lol_principal" onclick="trocarCategoria('lol','principal')"
-                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">PRINCIPAL</button>
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-size:13px; font-weight:700">PRINCIPAL</button>
                 <button id="btn_lol_academy" onclick="trocarCategoria('lol','academy')"
-                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">ACADEMY</button>
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">ACADEMY</button>
             </div>
             <div id="lol_principal" class="roster-panel" style="display:block;">
                 <div class="grid-5" id="grid_lol_principal"></div>
@@ -59,9 +56,8 @@
         <div id="painel_cs" style="display:none;">
             <div class="cat-tabs">
                 <button id="btn_cs_principal" onclick="trocarCategoria('cs','principal')"
-                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">PRINCIPAL</button>
-                <button id="btn_cs_academy" onclick="trocarCategoria('cs','academy')"
-                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;">ACADEMY</button>
+                    style="padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-size:13px; font-weight:700">PRINCIPAL</button>
+                <button id="btn_cs_academy" onclick="trocarCategoria('cs','academy')" style="padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700" >ACADEMY</button>
             </div>
             <div id="cs_principal" class="roster-panel" style="display:block;">
                 <div class="grid-5" id="grid_cs_principal"></div>
@@ -144,39 +140,30 @@
             { nome: "GTA 6", foto: "", bandeira: "assets/iconplayers/brasil.png" }
         ];
 
-        let estiloAtivo = "padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
-        let estiloInativo = "padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
-        let estiloCatAtivo = "padding:12px 36px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
-        let estiloCatInativo = "padding:12px 36px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; cursor:pointer;";
+        let estiloAtivo = "padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-size:13px; font-weight:700";
+        let estiloInativo = "padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700";
 
         function criarCard(jogador) {
-            let imgOuSvg = "";
-            
-            if (jogador.foto != "") {
-                imgOuSvg = '<img src="' + jogador.foto + '">';
-            } else {
-                imgOuSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="#3a3a3a" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
-            }
-
+            let img = '<img src="' + jogador.foto + '">';
             let icone = '<img src="' + jogador.icone + '">';
             let bandeira = '<img src="' + jogador.bandeira + '">';
 
-            let html = '<div class="player-card">';
-            html += '<div class="player-photo">' + imgOuSvg + '</div>';
-            html += '<div class="player-info">';
-            html += '<div class="flag">' + bandeira + '</div>';
-            html += '<span class="player-name">' + jogador.nome + '</span>';
-            html += '<span class="role-icon">' + icone + '</span>';
-            html += '</div></div>';
-            return html;
+            let card = '<div class="player-card">';
+            card += '<div class="player-photo">' + img + '</div>';
+            card += '<div class="player-info">';
+            card += '<div class="flag">' + bandeira + '</div>';
+            card += '<span class="player-name">' + jogador.nome + '</span>';
+            card += '<span class="role-icon">' + icone + '</span>';
+            card += '</div></div>';
+            return card;
         }
 
         function preencherGrid(elemento, vetor) {
-            let html = "";
+            let card = "";
             for (let i = 0; i < vetor.length; i++) {
-                html += criarCard(vetor[i]);
+                card += criarCard(vetor[i]);
             }
-            elemento.innerHTML = html;
+            elemento.innerHTML = card;
         }
 
         preencherGrid(grid_lol_principal, jogadoresLolPrincipal);
@@ -203,22 +190,22 @@
             if (moda == 'gta') { painel_gta.style.display = "block"; btn_gta.style.cssText = estiloAtivo; }
         }
 
-        function trocarCategoria(jogo, cat) {
+        function trocarCategoria(jogo, moda) {
             if (jogo == 'lol') {
                 lol_principal.style.display = "none";
                 lol_academy.style.display = "none";
-                btn_lol_principal.style.cssText = estiloCatInativo;
-                btn_lol_academy.style.cssText = estiloCatInativo;
-                if (cat == 'principal') { lol_principal.style.display = "block"; btn_lol_principal.style.cssText = estiloCatAtivo; }
-                if (cat == 'academy') { lol_academy.style.display = "block"; btn_lol_academy.style.cssText = estiloCatAtivo; }
+                btn_lol_principal.style.cssText = estiloInativo;
+                btn_lol_academy.style.cssText = estiloInativo;
+                if (moda == 'principal') { lol_principal.style.display = "block"; btn_lol_principal.style.cssText = estiloAtivo; }
+                if (moda == 'academy') { lol_academy.style.display = "block"; btn_lol_academy.style.cssText = estiloAtivo; }
             }
             if (jogo == 'cs') {
                 cs_principal.style.display = "none";
                 cs_academy.style.display = "none";
-                btn_cs_principal.style.cssText = estiloCatInativo;
-                btn_cs_academy.style.cssText = estiloCatInativo;
-                if (cat == 'principal') { cs_principal.style.display = "block"; btn_cs_principal.style.cssText = estiloCatAtivo; }
-                if (cat == 'academy') { cs_academy.style.display = "block"; btn_cs_academy.style.cssText = estiloCatAtivo; }
+                btn_cs_principal.style.cssText = estiloInativo;
+                btn_cs_academy.style.cssText = estiloInativo;
+                if (moda == 'principal') { cs_principal.style.display = "block"; btn_cs_principal.style.cssText = estiloAtivo; }
+                if (moda == 'academy') { cs_academy.style.display = "block"; btn_cs_academy.style.cssText = estiloAtivo; }
             }
         }
     </script>
