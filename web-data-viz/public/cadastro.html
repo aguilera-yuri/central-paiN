@@ -6,38 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>AquaTech | Cadastro</title>
+  <title>central paiN | Cadastro</title>
 
   <script src="./js/sessao.js"></script>
-
   <link rel="stylesheet" href="./css/estilo.css" />
-  <link rel="icon" href="./assets/icon/favicon2.ico" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+
 </head>
 
 <body onload="listar()">
-  <!--header inicio-->
-  <div class="header">
-    <div class="container">
-      <h1 class="titulo">AquaTech</h1>
-      <ul class="navbar">
-        <li>
-          <a href="index.html">Inicial</a>
-        </li>
-        <li>
-          <a href="simulador.html">Simulador</a>
-        </li>
-        <li>|</li>
-        <li>
-          <a href="login.html">Login</a>
-        </li>
-        <li class="agora">
-          <a href="#">Cadastro</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!--header fim-->
 
   <div class="login">
     <div class="alerta_erro">
@@ -45,53 +21,84 @@
         <span id="mensagem_erro"></span>
       </div>
     </div>
-    <div class="container">
-      <div class="card card-cadastro">
-        <h2>Bem-vindo!</h2>
-        <div class="formulario">
-          <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
-          <div class="campo">
-            <span>Código de ativação:</span>
-            <input id="codigo_input" type="text" placeholder="Insira aqui seu código" />
-          </div>
-          <div class="campo">
-            <span>Nome:</span>
-            <input id="nome_input" type="text" placeholder="Seu nome" />
-          </div>
-          <div class="campo">
-            <span>E-mail:</span>
-            <input id="email_input" type="text" placeholder="meuemail@provedor.com" />
-          </div>
-          <div class="campo">
-            <span>Senha:</span>
-            <input id="senha_input" type="password" placeholder="******" />
-          </div>
-          <div class="campo">
-            <span>Confirmação da Senha:</span>
-            <input id="confirmacao_senha_input" type="password" placeholder="******" />
-          </div>
-          <button class="botao" onclick="cadastrar()">Cadastrar</button>
-        </div>
-        <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div>
+    <div class="login-tela">
+    <div class="forms">
+      <h1>Bem-vindo<br>de volta</h1>
 
-        <div id="div_erros_login"></div>
+      <div class="campo">
+        <span>Nome</span>
+        <input type="text" id="ipt_nome" placeholder="Ex: Thaisssss">
       </div>
-    </div>
-  </div>
 
-  <!--footer inicio-->
-  <div class="footer">
-    <div class="container">
-      <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-      <span class="version">v1.0.0</span>
+      <div class="campo">
+        <span>Nome de usuário</span>
+        <input type="text" id="ipt_apelido" placeholder="Ex: sunnyzinha">
+      </div>
+
+      <div class="campo">
+        <span>CPF</span>
+        <input type="text" id="ipt_cpf" placeholder="Ex: 12345678910">
+      </div>
+
+      <div class="campo">
+        <span>Email</span>
+        <input type="text" id="ipt_email" placeholder="tata@email.com">
+      </div>
+
+      <div class="campo">
+        <span>Estado</span>
+        <select name="select_estado" id="ipt_estado">
+          <option value="null">Selecione...</option>
+          <option value="ac">Acre</option>
+          <option value="al">Alagoas</option>
+          <option value="ap">Amapá</option>
+          <option value="am">Amazonas</option>
+          <option value="ba">Bahia</option>
+          <option value="ce">Ceará</option>
+          <option value="df">Distrito Federal</option>
+          <option value="es">Espírito Santo</option>
+          <option value="go">Goiás</option>
+          <option value="ma">Maranhão</option>
+          <option value="mt">Mato Grosso</option>
+          <option value="ms">Mato Grosso do Sul</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="pa">Pará</option>
+          <option value="pb">Paraíba</option>
+          <option value="pr">Paraná</option>
+          <option value="pe">Pernambuco</option>
+          <option value="pi">Piauí</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="rn">Rio Grande do Norte</option>
+          <option value="rs">Rio Grande do Sul</option>
+          <option value="ro">Rondônia</option>
+          <option value="rr">Roraima</option>
+          <option value="sc">Santa Catarina</option>
+          <option value="sp">São Paulo</option>
+          <option value="se">Sergipe</option>
+          <option value="to">Tocantins</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <span>Senha</span>
+        <input type="password" id="ipt_senha" placeholder="••••••••">
+      </div>
+
+      <div class="campo">
+        <span>Confirme a senha</span>
+        <input type="password" id="ipt_senhaCon" placeholder="••••••••">
+      </div>
+
+      <button class="btn-entrar" onclick="cadastrar()">CADASTRAR</button>
+
+      <p class="link-cad">
+        Já possui cadastro? <a href="login.html">Clique Aqui!</a>
+      </p>
+    </div>
+
+    <div class="pain-vermelho">
     </div>
   </div>
-  <!--footer fim-->
 </body>
 
 </html>
@@ -106,20 +113,23 @@
 
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var codigoVar = codigo_input.value;
-    var idEmpresaVincular
-
+    var nomeVar = ipt_nome.value;
+    var apelidoVar = ipt_apelido.value;
+    var cpfVar = ipt_cpf.value;
+    var emailVar = ipt_email.value;
+    var senhaVar = ipt_senha.value;
+    var confirmacaoSenhaVar = ipt_senhaCon.value;
+    var estadoVar = ipt_estado.value;
+    var idEstado;
     // Verificando se há algum campo em branco
     if (
       nomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
-      codigoVar == ""
+      cpfVar == "" ||
+      apelidoVar == "" ||
+      estadoVar == "null"
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -133,8 +143,8 @@
 
     // Verificando se o código de ativação é de alguma empresa cadastrada
     for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-      if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        idEmpresaVincular = listaEmpresasCadastradas[i].id
+      if (listaEmpresasCadastradas[i].sigla == estadoVar) {
+        idEstado = listaEmpresasCadastradas[i].id
         console.log("Código de ativação válido.");
         break;
       } else {
@@ -154,9 +164,11 @@
         // crie um atributo que recebe o valor recuperado aqui
         // Agora vá para o arquivo routes/usuario.js
         nomeServer: nomeVar,
+        apelidoServer: apelidoVar,
+        cpfServer: cpfVar,
+        estadoServer: idEstado,
         emailServer: emailVar,
-        senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular
+        senhaServer: senhaVar
       }),
     })
       .then(function (resposta) {
@@ -197,7 +209,7 @@
             listaEmpresasCadastradas.push(empresa);
 
             console.log("listaEmpresasCadastradas")
-            console.log(listaEmpresasCadastradas[0].codigo_ativacao)
+            console.log(listaEmpresasCadastradas[0].sigla)
           });
         });
       })
