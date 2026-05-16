@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Central paiN | Lineups</title>
+
+    <script src="./js/sessao.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <nav class="header">
+        <div class="logo-icon">
+        </div>
+        <div class="links-header">
+            <a href="index.html">HOME</a>
+            <span>|</span>
+            <a href="lineups.html">LINEUPS</a>
+
+            <a href="login.html"><button class="btn-login">
+                    LOGIN
+                    <img src="./assets/icon_user.png" alt="Login" class="login-icon">
+                </button></a>
+        </div>
+    </nav>
+
+    <div class="painel-times">
+        <div class="lista-jogos">
+            <button id="btn_lol_principal" onclick="trocarModalidade('lol_principal')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #e8192c; background:#e8192c; color:#fff; font-size:13px; font-weight:700">LEAGUE
+                OF LEGENDS</button>
+
+            <button id="btn_lol_academy" onclick="trocarModalidade('lol_academy')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">LOL
+                ACADEMY</button>
+
+            <button id="btn_cs_principal" onclick="trocarModalidade('cs_principal')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">COUNTER
+                STRIKE</button>
+
+            <button id="btn_cs_academy" onclick="trocarModalidade('cs_academy')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">CS
+                ACADEMY</button>
+
+            <button id="btn_kings" onclick="trocarModalidade('kings')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">KINGS
+                LEAGUE</button>
+
+            <button id="btn_gta" onclick="trocarModalidade('gta')"
+                style="padding:14px 32px; border-radius:50px; border:1.5px solid #3a3a3a; background:transparent; color:#fff; font-size:13px; font-weight:700">GTA</button>
+        </div>
+
+        <div id="painel_lol_principal" class="cards-time" style="display:block;">
+            <div class="grid-time" id="grid_lol_principal"></div>
+        </div>
+
+        <div id="painel_lol_academy" class="cards-time" style="display:none;">
+            <div class="grid-time" id="grid_lol_academy"></div>
+        </div>
+
+        <div id="painel_cs_principal" class="cards-time" style="display:none;">
+            <div class="grid-time" id="grid_cs_principal"></div>
+        </div>
+
+        <div id="painel_cs_academy" class="cards-time" style="display:none;">
+            <div class="grid-time" id="grid_cs_academy"></div>
+        </div>
+
+        <div id="painel_kings" class="cards-time" style="display:none;">
+            <div class="grid-time" id="grid_kings"></div>
+        </div>
+
+        <div id="painel_gta" class="cards-time" style="display:none;">
+            <div class="grid-time" id="grid_gta"></div>
+        </div>
+    </div>
+
+    <script src="./js/jogadores.js"></script>
+</body>
+
+</html>

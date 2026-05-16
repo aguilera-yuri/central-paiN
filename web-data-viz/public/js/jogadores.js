@@ -1,102 +1,102 @@
 let jogadoresLolPrincipal = [
     {
         nome: "Robo",
-        foto: "assets/players/robo.png",
-        bandeira: "assets/iconplayers/brasil.png",
-        icone: "assets/iconplayers/top.png"
+        foto: "./assets/players/robo.png",
+        bandeira: "./assets/iconplayers/brasil.png",
+        icone: "./assets/iconplayers/top.png"
     },
 
     {
         nome: "CarioK",
-        foto: "assets/players/cariok.png",
-        bandeira: "assets/iconplayers/brasil.png",
-        icone: "assets/iconplayers/jungle.png"
+        foto: "./assets/players/cariok.png",
+        bandeira: "./assets/iconplayers/brasil.png",
+        icone: "./assets/iconplayers/jungle.png"
     },
 
     {
         nome: "Keine",
-        foto: "assets/players/keine.png",
-        bandeira: "assets/iconplayers/korea.png",
-        icone: "assets/iconplayers/mid.png"
+        foto: "./assets/players/keine.png",
+        bandeira: "./assets/iconplayers/korea.png",
+        icone: "./assets/iconplayers/mid.png"
     },
 
     {
         nome: "Trigger",
-        foto: "assets/players/trigger.png",
-        bandeira: "assets/iconplayers/korea.png",
-        icone: "assets/iconplayers/bot.png"
+        foto: "./assets/players/trigger.png",
+        bandeira: "./assets/iconplayers/korea.png",
+        icone: "./assets/iconplayers/bot.png"
     },
 
     {
         nome: "Kuri",
-        foto: "assets/players/kuri.png",
-        bandeira: "assets/iconplayers/korea.png",
-        icone: "assets/iconplayers/sup.png"
+        foto: "./assets/players/kuri.png",
+        bandeira: "./assets/iconplayers/korea.png",
+        icone: "./assets/iconplayers/sup.png"
     }
 ];
 
 let jogadoresLolAcademy = [
     {
         nome: "Zoen",
-        foto: "assets/players/zoen.png",
-        bandeira: "assets/iconplayers/argentina.png",
-        icone: "assets/iconplayers/top.png"
+        foto: "./assets/players/zoen.png",
+        bandeira: "./assets/iconplayers/argentina.png",
+        icone: "./assets/iconplayers/top.png"
     },
     {
         nome: "Samkz",
-        foto: "assets/players/samkz.png",
-        bandeira: "assets/iconplayers/brasil.png",
-        icone: "assets/iconplayers/jungle.png"
+        foto: "./assets/players/samkz.png",
+        bandeira: "./assets/iconplayers/brasil.png",
+        icone: "./assets/iconplayers/jungle.png"
     },
     {
         nome: "Namiru",
-        foto: "assets/players/namiru.png",
-        bandeira: "assets/iconplayers/brasil.png",
-        icone: "assets/iconplayers/mid.png"
+        foto: "./assets/players/namiru.png",
+        bandeira: "./assets/iconplayers/brasil.png",
+        icone: "./assets/iconplayers/mid.png"
     },
     {
         nome: "Marvin",
-        foto: "assets/players/marvin.png",
-        bandeira: "assets/iconplayers/brasil.png",
-        icone: "assets/iconplayers/bot.png"
+        foto: "./assets/players/marvin.png",
+        bandeira: "./assets/iconplayers/brasil.png",
+        icone: "./assets/iconplayers/bot.png"
     },
     {
         nome: "Gatovisck",
-        foto: "assets/players/gatovisck.png",
-        bandeira: "assets/iconplayers/brasil.png",
-        icone: "assets/iconplayers/sup.png"
+        foto: "./assets/players/gatovisck.png",
+        bandeira: "./assets/iconplayers/brasil.png",
+        icone: "./assets/iconplayers/sup.png"
     }
 ];
 
 let jogadoresCsPrincipal = [
     {
         nome: "v$m",
-        foto: "assets/players/vsm.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/vsm.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "nqz",
-        foto: "assets/players/nqz.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/nqz.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "biguzera",
-        foto: "assets/players/biguzera.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/biguzera.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "snow",
-        foto: "assets/players/snow.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/snow.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "piriajr",
-        foto: "assets/players/piriajr.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/piriajr.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     }
 ];
@@ -104,32 +104,32 @@ let jogadoresCsPrincipal = [
 let jogadoresCsAcademy = [
     {
         nome: "Tatu",
-        foto: "assets/players/tatu.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/tatu.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "k9izer",
-        foto: "assets/players/k9izer.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/k9izer.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "Markz",
-        foto: "assets/players/markz.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/markz.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "tsug",
-        foto: "assets/players/tsug.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/tsug.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
     {
         nome: "rkzinho",
-        foto: "assets/players/rkzinho.png",
-        bandeira: "assets/iconplayers/brasil.png",
+        foto: "./assets/players/rkzinho.png",
+        bandeira: "./assets/iconplayers/brasil.png",
         icone: ""
     },
 ];
@@ -137,120 +137,120 @@ let jogadoresCsAcademy = [
 let jogadoresKings = [
     {
         nome: "renato",
-        foto: "assets/players/renato.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/renato.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "chorume",
-        foto: "assets/players/chorume.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/chorume.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "camargo",
-        foto: "assets/players/camargo.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/camargo.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "kayky 2k",
-        foto: "assets/players/2k.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/2k.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "guilherme",
-        foto: "assets/players/gui_nasci.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/gui_nasci.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "bolt",
-        foto: "assets/players/bolt.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/bolt.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "profeta",
-        foto: "assets/players/profeta.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/profeta.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "gigante",
-        foto: "assets/players/gigante.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/gigante.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "alemao",
-        foto: "assets/players/alemao.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/alemao.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "juvenal",
-        foto: "assets/players/juvenal.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/juvenal.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "VB",
-        foto: "assets/players/VB.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/VB.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "henry japa",
-        foto: "assets/players/japa.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/japa.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "william",
-        foto: "assets/players/williamCosta.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/williamCosta.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "luisinho",
-        foto: "assets/players/luisinho.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/luisinho.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "davi",
-        foto: "assets/players/davi.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/davi.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "douglinhas",
-        foto: "assets/players/douglinhas.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/douglinhas.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "christian",
-        foto: "assets/players/chris.png",
-        bandeira: "assets/iconplayers/brasil.png"
+        foto: "./assets/players/chris.png",
+        bandeira: "./assets/iconplayers/brasil.png"
     }
 ];
 let jogadoresGta = [
     {
         nome: "GTA 1",
         foto: "",
-        bandeira: "assets/iconplayers/brasil.png"
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "GTA 2",
         foto: "",
-        bandeira: "assets/iconplayers/brasil.png"
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "GTA 3",
         foto: "",
-        bandeira: "assets/iconplayers/brasil.png"
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "GTA 4",
         foto: "",
-        bandeira: "assets/iconplayers/brasil.png"
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "GTA 5",
         foto: "",
-        bandeira: "assets/iconplayers/brasil.png"
+        bandeira: "./assets/iconplayers/brasil.png"
     },
     {
         nome: "GTA 6",
         foto: "",
-        bandeira: "assets/iconplayers/brasil.png"
+        bandeira: "./assets/iconplayers/brasil.png"
     }
 ];
 
